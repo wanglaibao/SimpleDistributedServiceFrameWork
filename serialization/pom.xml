@@ -45,6 +45,13 @@
             <version>1.2.47</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>hessian</artifactId>
+            <version>4.0.51</version>
+        </dependency>
+
+
         <!-- joda -->
         <dependency>
             <groupId>joda-time</groupId>

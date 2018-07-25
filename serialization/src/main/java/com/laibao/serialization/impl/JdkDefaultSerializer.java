@@ -35,7 +35,7 @@ public class JdkDefaultSerializer implements ISerializer {
     }
 
     public <T> T deserialize(byte[] data, Class<T> clazz) {
-        if (data == null || clazz == null) {
+        if (data == null) {
             logger.error("argument error");
             throw new IllegalArgumentException("argument error");
         }

@@ -22,16 +22,16 @@ public class JdkDefaultSerializer implements ISerializer {
             logger.error("obj is null");
             throw new IllegalArgumentException("obj is null");
         }
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         try{
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
             objectOutputStream.writeObject(obj);
             objectOutputStream.close();
+            return byteArrayOutputStream.toByteArray();
         }catch (Exception ex) {
             logger.error("obj serialize failure!",ex.getMessage());
             throw new RuntimeException("obj serialize failure!",ex);
         }
-        return byteArrayOutputStream.toByteArray();
     }
 
     public <T> T deserialize(byte[] data, Class<T> clazz) {
@@ -42,7 +42,10 @@ public class JdkDefaultSerializer implements ISerializer {
         try{
             ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(data);
             ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream);
-            return (T) objectInputStream.readObject();
+            T t = (T) objectInputStream.readObject();
+            objectInputStream.close();
+            byteArrayInputStream.close();
+            return t;
         }catch (Exception ex){
             logger.error("data deserialize failure!",ex.getMessage());
             throw new RuntimeException("data deserialize failure!",ex);

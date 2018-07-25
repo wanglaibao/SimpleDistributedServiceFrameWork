@@ -4,7 +4,11 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-
+/**
+ * @author laibao wang
+ * @date 2018-07-25
+ * @version 1.0
+ */
 public class User{
 
     private String name;
@@ -14,6 +18,9 @@ public class User{
     private List<User> userList;
 
     private Map<String, User> userMap;
+
+    public User() {
+    }
 
     public List<User> getUserList() {
         return userList;

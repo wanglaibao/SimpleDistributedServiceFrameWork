@@ -42,7 +42,6 @@ public class User{
         System.out.println("-------------------"+name);
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }

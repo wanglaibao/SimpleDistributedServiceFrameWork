@@ -41,9 +41,9 @@ public class IOProtoStuffSerializer implements ISerializer{
             throw new IllegalArgumentException("obj is null");
         }
         try{
-            Class<T> clazz = (Class<T>) obj.getClass();
+            //Class<T> clazz = (Class<T>) obj.getClass();
             LinkedBuffer buffer = LinkedBuffer.allocate(LinkedBuffer.DEFAULT_BUFFER_SIZE);
-            Schema<T> schema = getSchema(clazz);
+            Schema<T> schema = (Schema<T>) getSchema(obj.getClass());
             byte[] byteArray = ProtostuffIOUtil.toByteArray(obj, schema, buffer);
             buffer.clear();
             return byteArray;
@@ -59,8 +59,9 @@ public class IOProtoStuffSerializer implements ISerializer{
             throw new IllegalArgumentException("argument error");
         }
         try{
-            T t = (T) objenesis.newInstance(clazz);
+            //T t = (T) objenesis.newInstance(clazz);
             Schema<T> schema = getSchema(clazz);
+            T t = schema.newMessage();
             ProtostuffIOUtil.mergeFrom(data,t,schema);
             return t;
         }catch (Exception ex) {

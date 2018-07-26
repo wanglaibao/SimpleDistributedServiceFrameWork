@@ -11,10 +11,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @date 2018-07-26
  * @version 1.0
  */
-public class RmiInvokerClientTest {
+public class RmiInvokerProxyTest {
 
     @Test
-    public void testRmiInvokerClient(){
+    public void testRmiInvoker(){
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext();
         applicationContext.setConfigLocations(new String[]{"META-INF/spring/rmi-rpc-server.xml",
                                                             "META-INF/spring/rmi-rpc-client.xml"});

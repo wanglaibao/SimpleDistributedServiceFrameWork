@@ -93,6 +93,13 @@
             <version>1.6.0</version>
         </dependency>
 
+        <!-- messagepack -->
+        <dependency>
+            <groupId>org.msgpack</groupId>
+            <artifactId>msgpack</artifactId>
+            <version>0.6.12</version>
+        </dependency>
+
         <!-- joda -->
         <dependency>
             <groupId>joda-time</groupId>

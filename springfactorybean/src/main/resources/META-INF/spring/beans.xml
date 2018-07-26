@@ -9,4 +9,8 @@
         <property name="email" value="jinge@qq.com"/>
      </bean>
 
+    <bean id="person" class="com.laibao.springrpc.facotybean.PersonFactoryBean">
+        <property name="personStringArr" value="金戈#杭州#22"/>
+    </bean>
+
 </beans>

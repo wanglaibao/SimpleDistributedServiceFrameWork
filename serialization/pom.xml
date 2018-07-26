@@ -100,6 +100,14 @@
             <version>0.6.12</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.jboss.marshalling/jboss-marshalling-serial -->
+        <dependency>
+            <groupId>org.jboss.marshalling</groupId>
+            <artifactId>jboss-marshalling-serial</artifactId>
+            <version>2.0.5.Final</version>
+        </dependency>
+
+
         <!-- joda -->
         <dependency>
             <groupId>joda-time</groupId>

@@ -1,11 +1,14 @@
 package com.laibao.springrpc.domain;
 
+import java.io.Serializable;
+
 /**
  * @author laibao wang
  * @date 2018-07-26
  * @version 1.0
  */
-public class User {
+public class User implements Serializable{
+    private static final long serialVersionUID = -5948259407678888765L;
 
     private String name;
 

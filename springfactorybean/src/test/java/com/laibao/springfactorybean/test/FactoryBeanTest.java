@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @date 2018-07-26
  * @version 1.0
  */
-public class UserFactoryBeanTest {
+public class FactoryBeanTest {
 
     @Test
     public void testUserFactoryBean() {

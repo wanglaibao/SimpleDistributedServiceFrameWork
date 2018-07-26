@@ -14,6 +14,15 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
+    <dependencies>
+        <!-- hessian -->
+        <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>hessian</artifactId>
+            <version>4.0.51</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

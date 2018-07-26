@@ -7,6 +7,8 @@
             <props>
                 <!-- httpInvoker  -->
                 <prop key="/user.httpInvoker">serviceHttpInvokeExporter</prop>
+                <!-- hessian -->
+                <prop key="/user.hessianInvoker">serviceHessianExport</prop>
             </props>
         </property>
     </bean>

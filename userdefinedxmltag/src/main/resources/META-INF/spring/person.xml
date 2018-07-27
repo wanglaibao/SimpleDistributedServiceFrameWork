@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:person="http://github.com/wanglaibao/schema"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://github.com/wanglaibao/schema
+                            http://github.com/wanglaibao/schema/person.xsd">
+    <person:elementName  name="jinge" address="中国.浙江省.杭州市.西湖区" age="28"/>
+</beans>

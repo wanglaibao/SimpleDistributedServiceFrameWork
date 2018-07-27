@@ -1,4 +1,6 @@
 ###   基于Spring可扩展Schema提供自定义配置支持
+该文件重点介绍SpringFramework基于Schema风格的XML扩展机制，
+通过Spring提供的xml扩展机制，我们可以加入自己的自定义标签,这样SpringFramework就会帮我们解析和管理自定义Bean.
 
 #### 1.Spring FrameWork 扩展Schema的步骤
 

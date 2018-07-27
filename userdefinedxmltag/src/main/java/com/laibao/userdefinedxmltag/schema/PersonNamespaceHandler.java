@@ -14,6 +14,6 @@ public class PersonNamespaceHandler extends NamespaceHandlerSupport {
     private Logger logger = LoggerFactory.getLogger(PersonNamespaceHandler.class);
 
     public void init() {
-        registerBeanDefinitionParser("elementName", new PersonBeanDefinitionParser(Person.class));
+        registerBeanDefinitionParser("person", new PersonBeanDefinitionParser(Person.class));
     }
 }

@@ -23,9 +23,11 @@
           </xsd:attribute>
     </xsd:complexType>
 
+
     <xsd:element name="elementName" type="elementNameComplexType">
          <xsd:annotation>
              <xsd:documentation><![CDATA[document for elementName]]></xsd:documentation>
          </xsd:annotation>
     </xsd:element>
+
 </xsd:schema>

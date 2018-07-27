@@ -2,11 +2,11 @@
 
 #### 1.Spring FrameWork 扩展Schema的步骤
 
-* 设计配置属性和JavaBean
+* 定义标签化的JavaBean以及有关的属性
 
 * 编写.xsd定义文件
 
-* 编写NamespaceHandler和BeanDefinitionParser子类或者实现类分别完成解析和定义工作
+* 编写NamespaceHandler和BeanDefinitionParser的子类或者实现类分别完成解析和定义工作
 
 * 编写spring.handlers和spring.schemas串联起所有部件
 

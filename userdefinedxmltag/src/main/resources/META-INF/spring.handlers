@@ -1,1 +1,2 @@
-http\://github.com/wanglaibao/schema=com.laibao.userdefinedxmltag.schema.PersonNamespaceHandler
+http\://github.com/wanglaibao/schema/person=com.laibao.userdefinedxmltag.schema.PersonNamespaceHandler
+http\://github.com/wanglaibao/schema/people=com.laibao.userdefinedxmltag.schema.PeopleNamespaceHandler

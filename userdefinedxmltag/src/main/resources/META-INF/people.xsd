@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+        xmlns="http://github.com/wanglaibao/schema"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        targetNamespace="http://github.com/wanglaibao/schema/people"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
+
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+
+    <xsd:element name="people">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="name" type="xsd:string" />
+                    <xsd:attribute name="age" type="xsd:int" />
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!--
+        配置说明 配置说明 配置说明 配置说明 配置说明 配置说明 配置说明 配置说明 配置说明 配置说明 配置说明
+        关于xsd:schema的各个属性具体含义就不作过多解释，可以参见http://www.w3school.com.cn/schema/schema_schema.asp
+        <xsd:element name="people">对应着配置项节点的名称，因此在应用中会用people作为节点名来引用这个配置
+        <xsd:attribute name="name" type="xsd:string" />和<xsd:attribute name="age" type="xsd:int" />
+        对应着配置项people的两个属性名，因此在应用中可以配置name和age两个属性，分别是string和int类型
+    -->
+</xsd:schema>

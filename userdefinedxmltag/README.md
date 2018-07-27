@@ -15,7 +15,19 @@
 * 在定义bean的xml配置文件中应用
 
 
+#### 2.在线技术参考文档
 
+* [Appendix B. Extensible XML authoring](https://docs.spring.io/spring-framework/docs/2.5.6/reference/extensible-xml.html)
+
+* [Extensible XML authoring](http://itmyhome.com/spring/extensible-xml.html)
+
+* [Extensible XML authoring](https://docs.spring.io/spring-framework/docs/4.3.x/spring-framework-reference/htmlsingle/#xml-custom)
+
+* [XML Schema Authoring](https://docs.spring.io/spring-framework/docs/5.0.8.RELEASE/spring-framework-reference/core.html#xml-custom)
+
+* [基于Spring可扩展Schema提供自定义配置支持](https://blog.csdn.net/cutesource/article/details/5864562)
+
+* [如何在spring中自定义xml标签](https://www.cnblogs.com/java-zhao/p/7619922.html)
 
 
 

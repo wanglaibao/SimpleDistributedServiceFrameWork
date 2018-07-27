@@ -1,5 +1,7 @@
 package com.laibao.userdefinedxmltag.test;
 
+import com.alibaba.fastjson.JSON;
+import com.laibao.userdefinedxmltag.domain.DataSource;
 import com.laibao.userdefinedxmltag.domain.People;
 import com.laibao.userdefinedxmltag.domain.Person;
 import org.junit.Test;
@@ -29,5 +31,14 @@ public class UserDefinedXmlTagTest {
 
         People people = applicationContext.getBean("jinge",People.class);
         System.out.println("name: " + people.getName() + " age: " + people.getAge() + " id: "+ people.getId());
+    }
+
+    @Test
+    public void testDataSourceBeanDefinitionXmlTag() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext();
+        applicationContext.setConfigLocation("META-INF/spring/datasource.xml");
+        applicationContext.refresh();
+        DataSource dataSource = applicationContext.getBean("dataSource",DataSource.class);
+        System.out.println(JSON.toJSONString(dataSource));
     }
 }

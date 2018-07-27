@@ -30,6 +30,8 @@ Spring框架从2.0版本开始，提供了基于Schema风格的XML扩展机制�
 
 * [如何在spring中自定义xml标签](https://www.cnblogs.com/java-zhao/p/7619922.html)
 
+* [spring源码学习之：xml配置文件标签自定义](https://www.cnblogs.com/shangxiaofei/p/5788650.html)
+
 
 
 

@@ -1,6 +1,6 @@
 ###     FactoryBean 介绍与使用
  
- #### 1. Overview of FactoryBean
+#### 1. Overview of FactoryBean【马猴儿 严真真】
 There are two kinds of beans in the Spring bean container: ordinary beans and factory beans. 
 Spring uses the former directly, whereas latter can produce objects themselves, which are managed by the framework.
 And, simply put, we can build a factory bean by implementing org.springframework.beans.factory.FactoryBean interface.
@@ -12,6 +12,7 @@ LocalSessionFactoryBean which is used to create hibernate session object, but th
 
 
 #### 2.The Basics of Factory Beans
+
 * the definition of  ```FactoryBean ```
 
 ```
@@ -39,22 +40,35 @@ LocalSessionFactoryBean which is used to create hibernate session object, but th
 * To access the FactoryBean, we just need to add a “&” before the bean name.
 
 * Use FactoryBean with Java-based Configuration
+
        
-#### 3.Ways to Initialize
+#### 3.Why use factory beans
+* Factory beans are mostly used to implement framework facilities. some usage below.
+
+* When looking up an object (such as a data source) from JNDI, we can use JndiObjectFactoryBean.
+
+* When using classic Spring AOP to create a proxy for a bean, we can use ProxyFactoryBean.
+
+* When creating a Hibernate session factory in the IoC container, we can use LocalSessionFactoryBean.
+       
+#### 4.Ways to Initialize
 * just Initialize inside the method getObject()
 
 * implementing the InitializingBean interface
 
 * using @PostConstruct annotation
 
-#### 4.AbstractFactoryBean
+#### 5. to extends AbstractFactoryBean
 
+* By extending the AbstractFactoryBean class, your factory bean can simply override the createInstance() method to create the target bean instance. 
+    
+  In addition, you have to return the target bean’s type in the getObjectType() method for the auto-wiring feature to work properly.
 
-#### 5.Conclusion
+#### 6.Conclusion
 
 * Using a FactoryBean can be a good practice to encapsulate complex construction logic or make configuring highly configurable objects easier in Spring.
        
- #### 6.document on line
+ #### 7.document on line
  
  * [Spring Corner: Beyond the FactoryBean](http://joshlong.com/jl/blogPost/spring_corner_beyond_the_factorybean.html)
  
@@ -62,7 +76,8 @@ LocalSessionFactoryBean which is used to create hibernate session object, but th
  
  * [How to use the Spring FactoryBean](http://www.baeldung.com/spring-factorybean)
  
- * [XML Schema Authoring](https://docs.spring.io/spring-framework/docs/5.0.8.RELEASE/spring-framework-reference/core.html#xml-custom)
+ * [tutorials](https://github.com/eugenp/tutorials/tree/master/spring-core)
  
- * [基于Spring可扩展Schema提供自定义配置支持](https://blog.csdn.net/cutesource/article/details/5864562)
+ * [非常好的DEMO资源](https://github.com/eugenp/tutorials)
  
+ * [Spring FactoryBean Example](https://howtodoinjava.com/spring-core/how-to-create-beans-using-spring-factorybean/)

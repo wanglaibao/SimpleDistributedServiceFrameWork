@@ -2,6 +2,7 @@ package com.laibao.springfactorybean.test;
 
 import com.alibaba.fastjson.JSON;
 import com.laibao.springrpc.domain.Car;
+import com.laibao.springrpc.domain.Employee;
 import com.laibao.springrpc.domain.Person;
 import com.laibao.springrpc.domain.User;
 import org.junit.Test;
@@ -30,6 +31,22 @@ public class FactoryBeanTest {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("META-INF/spring/factorybean.xml");
         Car car = applicationContext.getBean("carFactoryBean",Car.class);
         System.out.println(JSON.toJSONString(car));
+        applicationContext.close();
+    }
+
+    @Test
+    public void testEmployeeFactoryBean() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext();
+        applicationContext.setConfigLocation("META-INF/spring/factorybean.xml");
+        applicationContext.refresh();
+
+        Employee manager = applicationContext.getBean("manager", Employee.class);
+        System.out.println(JSON.toJSONString(manager));
+
+        System.out.println();
+
+        Employee director =  applicationContext.getBean("director",Employee.class);
+        System.out.println(JSON.toJSONString(director));;
         applicationContext.close();
     }
 }

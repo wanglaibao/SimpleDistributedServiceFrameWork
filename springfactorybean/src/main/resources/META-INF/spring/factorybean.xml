@@ -4,10 +4,24 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-        <bean id="carFactoryBean" class="com.laibao.springrpc.facotybean.CarFactoryBean">
+       <bean id="carFactoryBean" class="com.laibao.springrpc.facotybean.CarFactoryBean">
             <property name = "maker" value ="浙江飞龙汽车有限公司"/>
             <property name = "year" value ="2024"/>
             <property name="brand" value="金龙"/>
-         </bean>
+       </bean>
+
+       <bean id="manager" class="com.laibao.springrpc.facotybean.EmployeeFactoryBean">
+            <property name="id" value="1000"/>
+            <property name="firstName" value="金"/>
+            <property name="lastName" value="世遗"/>
+            <property name="designation" value="Manager" />
+        </bean>
+
+        <bean id="director"  class="com.laibao.springrpc.facotybean.EmployeeFactoryBean">
+            <property name="id" value="1001"/>
+            <property name="firstName" value="金"/>
+            <property name="lastName" value="逐流"/>
+            <property name="designation" value="Director" />
+        </bean>
 
 </beans>

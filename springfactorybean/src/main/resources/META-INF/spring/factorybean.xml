@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean id="carFactoryBean" class="com.laibao.springrpc.facotybean.CarFactoryBean">
+            <property name = "maker" value ="浙江飞龙汽车有限公司"/>
+            <property name = "year" value ="2024"/>
+            <property name="brand" value="金龙"/>
+         </bean>
+
+</beans>

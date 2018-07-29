@@ -1,3 +1,4 @@
 http\://github.com/wanglaibao/schema/person=com.laibao.userdefinedxmltag.schema.PersonNamespaceHandler
-http\://github.com/wanglaibao/schema/people=com.laibao.userdefinedxmltag.schema.PeopleNamespaceHandler
 http\://github.com/wanglaibao/schema/datasource=com.laibao.userdefinedxmltag.schema.DataSourceNamespaceHandler
+http\://github.com/wanglaibao/schema/people=com.laibao.userdefinedxmltag.schema.PeopleNamespaceHandler
+http\://github.com/wanglaibao/schema/mina=com.laibao.userdefinedxmltag.schema.MinaNamespaceHandler

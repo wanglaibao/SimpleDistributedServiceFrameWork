@@ -95,18 +95,25 @@
             <version>1.4</version>
         </dependency>
 
+
         <dependency>
             <groupId>org.jmock</groupId>
             <artifactId>jmock</artifactId>
             <version>2.5.1</version>
             <scope>test</scope>
         </dependency>
+        <!--  去掉啦 影响测试 导致了
+         java.lang.NoSuchMethodError: org.springframework.beans.factory.config.ConfigurableBeanFactory.getSingletonMutex()Ljava/lang/Object
+         https://www.cnblogs.com/jinjiyese153/p/6972030.html
+
         <dependency>
             <groupId>org.jmock</groupId>
             <artifactId>jmock-junit4</artifactId>
             <version>2.5.1</version>
             <scope>test</scope>
         </dependency>
+        -->
+
         <dependency>
             <groupId>org.jmock</groupId>
             <artifactId>jmock-legacy</artifactId>
@@ -119,10 +126,10 @@
             <version>2.2</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.objenesis</groupId>
             <artifactId>objenesis</artifactId>
-            <scope>test</scope>
             <version>1.2</version>
         </dependency>
         <dependency>

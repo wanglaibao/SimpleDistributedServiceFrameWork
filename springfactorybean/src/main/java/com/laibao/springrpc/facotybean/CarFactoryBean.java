@@ -40,6 +40,18 @@ public class CarFactoryBean implements FactoryBean<Car>,InitializingBean{
         this.year = year;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getMaker() {
+        return maker;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
     public void afterPropertiesSet() throws Exception {
         carBuilder = CarBuilder.car();
         if (StringUtils.isNotBlank(brand)) {

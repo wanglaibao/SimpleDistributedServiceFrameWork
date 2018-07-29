@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://github.com/wanglaibao/schema/mina"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://github.com/wanglaibao/schema/mina
+                            http://github.com/wanglaibao/schema/mina.xsd
+                            http://www.springframework.org/schema/context
+                            http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.laibao.userdefinedxmltag.service"/>
+
+    <dubbo:registry id="zk" protocol="zookeeper" address="127.0.0.1" />
+
+    <dubbo:protocol id="hessian" name="hessian" port="9001"/>
+
+    <dubbo:service id="rpcService" ref="helloService" interface="com.laibao.userdefinedxmltag.service.HelloService" timeout="5000" retries="3"/>
+
+    <dubbo:reference id="personService" interface="com.laibao.userdefinedxmltag.service.PersonService" retries="3" check="false" />
+
+</beans>

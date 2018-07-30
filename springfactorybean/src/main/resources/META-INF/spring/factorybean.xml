@@ -24,36 +24,33 @@
             <property name="designation" value="Director" />
        </bean>
 
-        <!--
+
        <bean id="oracleDBConnection" class="com.laibao.springrpc.facotybean.ConnectionProxyFactoryBean">
             <property name="jdbcDriver" value="oracle.jdbc.driver.OracleDriver" />
             <property name="connectionUrl" value="jdbc:oracle:thin:@localhost:1521:test" />
             <property name="dbUserName" value="system" />
             <property name="dbPassword" value="manager" />
        </bean>
-        -->
+
        <bean id="mysqlDBConnection" class="com.laibao.springrpc.facotybean.ConnectionProxyFactoryBean">
             <property name="jdbcDriver" value="com.mysql.jdbc.Driver" />
-            <property name="connectionUrl" value="jdbc:mysql://116.62.138.41:3306/strategic_test?useunicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;zeroDateTimeBehavior=convertToNull" />
+            <property name="connectionUrl" value="jdbc:mysql://XXXXXXXX:3306/test?useunicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;zeroDateTimeBehavior=convertToNull" />
             <property name="dbUserName" value="dev" />
             <property name="dbPassword" value="JlDV94BW!" />
        </bean>
 
-    <!--
        <bean id="sqlServerDBConnection" class="com.laibao.springrpc.facotybean.ConnectionProxyFactoryBean">
             <property name="jdbcDriver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
             <property name="connectionUrl" value="jdbc:sqlserver://localhost:1433;databaseName=test;user=sa;password=sa" />
             <property name="dbUserName" value="sa" />
             <property name="dbPassword" value="sa" />
        </bean>
-    -->
 
-    <!--
-    <bean id="postgresqlDBConnection" class="com.laibao.springrpc.facotybean.ConnectionProxyFactoryBean">
-        <property name="jdbcDriver" value="org.postgresql.Driver" />
-        <property name="connectionUrl" value="jdbc:postgresql://localhost:5432/test" />
-        <property name="dbUserName" value="postgres" />
-        <property name="dbPassword" value="postgres" />
-    </bean>
-    -->
+        <bean id="postgresqlDBConnection" class="com.laibao.springrpc.facotybean.ConnectionProxyFactoryBean">
+            <property name="jdbcDriver" value="org.postgresql.Driver" />
+            <property name="connectionUrl" value="jdbc:postgresql://localhost:5432/test" />
+            <property name="dbUserName" value="postgres" />
+            <property name="dbPassword" value="postgres" />
+        </bean>
+
 </beans>

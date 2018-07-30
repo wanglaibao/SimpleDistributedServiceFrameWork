@@ -76,7 +76,7 @@ public class FactoryBeanTest {
     public void testMySqlConnectio() throws Exception {
         // JDBC driver name and database URL
         final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-        final String DB_URL = "jdbc:mysql://116.62.138.41:3306/strategic_test";
+        final String DB_URL = "jdbc:mysql://XXXXX:3306/test";
         //  Database credentials
         final String USER = "dev";
         final String PASS = "JlDV94BW!";

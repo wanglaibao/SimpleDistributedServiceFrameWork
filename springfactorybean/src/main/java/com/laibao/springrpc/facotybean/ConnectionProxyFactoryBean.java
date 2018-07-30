@@ -23,10 +23,6 @@ public class ConnectionProxyFactoryBean implements FactoryBean<Connection>,Initi
     private Connection connection;
 
     public Connection getObject() throws Exception {
-          /* Register jdbc driver class. */
-        Class.forName(jdbcDriver);
-		/* Get the jdbc Connection object. */
-        connection = DriverManager.getConnection(connectionUrl, dbUserName, dbPassword);
         return connection;
     }
 
@@ -35,10 +31,10 @@ public class ConnectionProxyFactoryBean implements FactoryBean<Connection>,Initi
     }
 
     public void afterPropertiesSet() throws Exception {
-        /* Register jdbc driver class. */
-        //Class.forName(jdbcDriver);
+         /* Register jdbc driver class. */
+        Class.forName(jdbcDriver);
 		/* Get the jdbc Connection object. */
-        //connection = DriverManager.getConnection(connectionUrl, dbUserName, dbPassword);
+        connection = DriverManager.getConnection(connectionUrl, dbUserName, dbPassword);
     }
 
     public String getJdbcDriver() {

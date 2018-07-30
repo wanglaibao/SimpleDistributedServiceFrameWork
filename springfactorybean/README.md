@@ -81,3 +81,5 @@ LocalSessionFactoryBean which is used to create hibernate session object, but th
  * [非常好的DEMO资源](https://github.com/eugenp/tutorials)
  
  * [Spring FactoryBean Example](https://howtodoinjava.com/spring-core/how-to-create-beans-using-spring-factorybean/)
+ 
+ * [Spring FactoryBean Example](https://www.dev2qa.com/spring-factorybean-example/)

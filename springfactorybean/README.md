@@ -1,6 +1,6 @@
 ###     FactoryBean 介绍与使用
  
-#### 1. Overview of FactoryBean【马猴儿 严真真】
+#### 1. Overview of FactoryBean
 There are two kinds of beans in the Spring bean container: ordinary beans and factory beans. 
 Spring uses the former directly, whereas latter can produce objects themselves, which are managed by the framework.
 And, simply put, we can build a factory bean by implementing org.springframework.beans.factory.FactoryBean interface.

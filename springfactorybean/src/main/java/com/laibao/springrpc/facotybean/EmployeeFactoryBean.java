@@ -76,4 +76,5 @@ public class EmployeeFactoryBean extends AbstractFactoryBean<Employee>{
     public void setDesignation(String designation) {
         this.designation = designation;
     }
+
 }

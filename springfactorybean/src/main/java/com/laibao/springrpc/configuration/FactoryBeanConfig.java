@@ -1,7 +1,9 @@
 package com.laibao.springrpc.configuration;
 
 import com.laibao.springrpc.domain.Car;
+import com.laibao.springrpc.domain.Employee;
 import com.laibao.springrpc.facotybean.CarFactoryBean;
+import com.laibao.springrpc.facotybean.EmployeeFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -22,10 +24,23 @@ public class FactoryBeanConfig {
         return carFactoryBean;
     }
 
+    @Bean(name = "managerFactoryBean")
+    public EmployeeFactoryBean managerFactoryBean() {
+        EmployeeFactoryBean employeeFactoryBean = new EmployeeFactoryBean();
+        employeeFactoryBean.setId(1000);
+        employeeFactoryBean.setFirstName("马");
+        employeeFactoryBean.setLastName("德怀");
+        employeeFactoryBean.setDesignation("总经理");
+        return employeeFactoryBean;
+    }
+
     @Bean
     public Car car() throws Exception {
         return carFactoryBean().getObject();
     }
 
-
+    @Bean
+    public Employee manager() throws Exception {
+        return managerFactoryBean().getObject();
+    }
 }
